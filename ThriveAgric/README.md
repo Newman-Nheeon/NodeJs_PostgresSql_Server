@@ -1,6 +1,38 @@
 ## HOW TO
 Node JS, Express and Postgres SQL server.
 
+### Database Schemas for Users
+```sh
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    firstname VARCHAR(255) NOT NULL,
+    lastname VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(50) DEFAULT 'user', -- Assuming roles like 'user', 'admin', etc.
+    refreshtoken TEXT, -- This could be stored elsewhere too, depending on the strategy
+    githubid VARCHAR(255) UNIQUE,
+    username VARCHAR(255) UNIQUE,
+    googleid VARCHAR(255) UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### Database Schemas for Tasks
+```sh
+CREATE TABLE tasks (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    userId INTEGER REFERENCES users(id),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+```
+
 
 ### Installation
 1. Clone the repo

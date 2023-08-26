@@ -71,8 +71,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/dashboard', isAuthenticated,  async (req, res) => {
-    // Assuming you have logic here to show the dashboard
-    // If not, you can just render a dashboard view
     res.render('dashboard');
 });
 

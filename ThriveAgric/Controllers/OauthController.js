@@ -1,6 +1,6 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-const { pool } = require('../config/database');  // Ensure correct path
+const { pool } = require('../Config/database');  // Ensure correct path
 
 const jwt = require('jsonwebtoken');
 const axios = require('axios');
