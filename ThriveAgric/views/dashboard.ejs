@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Todo App</h1>
+            <a href="/logout" class="logout-btn">Logout</a>
+        </header>
+        <section class="user-info">
+            <img src="path_to_github_avatar.jpg" alt="User Avatar" class="user-avatar">
+            <h2>Welcome</h2>
+        </section>
+        <section class="dashboard-content">
+            <!-- Your application content goes here -->
+            <p>This is your dashboard content. Customize as needed.</p>
+        </section>
+    </div>
+</body>
+<style>
+.dashboard-container {
+    font-family: Arial, sans-serif;
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logout-btn {
+    padding: 8px 15px;
+    background-color: #ff4b5c;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #ff606d;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.dashboard-content {
+    margin-top: 40px;
+}
+
+
+</style>
+</html>
